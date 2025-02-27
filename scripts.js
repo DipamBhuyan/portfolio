@@ -23,24 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressObserver = new IntersectionObserver(animateProgressBars, { threshold: 0.5 });
     progressBars.forEach((bar) => progressObserver.observe(bar));
 
-    // ✅ Gallery Slider with Auto and Manual Navigation
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2,
-        spaceBetween: 10, 
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            0: { slidesPerView: 1 }, 
-            768: { slidesPerView: 2 } 
-        }
-    });
-
     // ✅ Fade-in Gallery on Scroll
     const galleryContainer = document.querySelector(".gallery-container");
     if (galleryContainer) {
@@ -97,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
         sections.forEach((section) => observer.observe(section));
     });
-    
 
 // Stars Effect
 document.addEventListener("DOMContentLoaded", function() {
@@ -126,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Contcat Form Submission
+// Contact Form Submission
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -149,11 +130,11 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     try {
         const response = await fetch("https://script.google.com/macros/s/AKfycbyhL6wroOwVWdPhSha8TSAy_SFTPUlaqtdErRQH0ChvNgRYtEE5wpxbFL5cbqwNBa80/exec", {
             method: "POST",
-            mode: "cors",
+            mode: "no-cors", // Change to "no-cors" to prevent CORS issues
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded", // Change JSON to form-urlencoded
             },
-            body: JSON.stringify(formData),
+            body: new URLSearchParams(formData).toString(),
         });
 
         const result = await response.json();
