@@ -173,3 +173,15 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         formStatus.innerText = "Message sent successfully!";
     }, 2000); // Replace with actual form submission logic
 });
+
+//Profile View Counter
+let count = localStorage.getItem("profileViews");
+
+    if (!count) {
+        count = 1; // First visit
+    } else {
+        count = parseInt(count) + 1; // Increment count
+    }
+
+    localStorage.setItem("profileViews", count);
+    document.getElementById("view-count").textContent = count;
