@@ -1021,7 +1021,7 @@ footer {
 /* Image Inside Card */
 .card img {
     border-radius: 10px;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -1031,11 +1031,11 @@ footer {
 }
 
 .swiper-button-next, .swiper-button-prev {
-    color:#1f26eb;
+    color:#4da6ff;
 }
 .swiper-button-next:hover, .swiper-button-prev:hover{
     transition: var(--transition);
-    color: #e86602;
+    color: bisque;
 }
 
 /* Swiper Pagination */
@@ -1051,10 +1051,81 @@ footer {
 .swiper-pagination-bullet-active {
     width: 12px; /* Bigger size for active dot */
     height: 12px;
-    background: blue;
+    background: #4da6ff;
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .card img {
+        border-radius: 10px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-body-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* Show only 5 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .view-more-btn {
+        color: #007bff;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card img {
+        border-radius: 10px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .card-body-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Show only 5 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .view-more-btn {
+        color: #007bff;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 820px) {
+    .card img {
+        border-radius: 10px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .card-body-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* Show only 5 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .view-more-btn {
+        color: #007bff;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+}
 
 .btn-btn-primary {
     width: 120px;
@@ -1070,11 +1141,6 @@ footer {
     border: 1px solid rgb(4, 52, 244);
 }
 
-/* h2.section-title-skills {
-    color:rgb(253, 253, 253);
-    margin-bottom:60px;
-    font-size:50px;
-} */
 /* Skills Container */
 .skills-container {
     display: flex;
@@ -1293,6 +1359,11 @@ footer {
         grid-template-columns: 1fr; /* Single column layout */
         text-align: center;
     }
+
+    .contact-form button {
+        width: fit-content;
+    }
+    
 }
 
 /* Phones */
@@ -1330,6 +1401,9 @@ footer {
     }
     .skill {
         width:100%;
+    }
+    .contact-form button{
+        width: fit-content;
     }
 }
 
