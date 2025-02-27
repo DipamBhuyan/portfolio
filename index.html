@@ -337,6 +337,15 @@
                 },
             });
         });
+        
+        fetch("https://api.countapi.xyz/hit/DipamBhuyan.github.io/profile-view")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("view-count").textContent = data.value;
+        })
+        .catch(err => {
+            console.error("Error fetching view count:", err);
+        });
     </script>
 </body>
 </html>
