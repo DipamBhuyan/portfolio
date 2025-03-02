@@ -1414,6 +1414,12 @@ footer {
         font-size: 14px;
     }
 
+    .nav-container {
+        width: 80%;
+        top: 15PX;
+        padding: 1px 0;
+    }
+
     .container, .about-container, .contact-container {
         padding: 15px;
     }
