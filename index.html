@@ -277,7 +277,8 @@
                     <a href="https://wa.me/919101650072" target="_blank"><i class="fab fa-whatsapp" style="color: white; font-size: 30px;"></i></a>
                 </div>
             </div>
-            <div class="contact-form-container">
+            <div class="contact-form-container overlay-container" style="background: rgba(0, 0, 0, 0.5); padding: 70px 50px; border-radius: 30px;" onmouseover="this.style.boxShadow='0px 6px 15px rgba(0, 0, 0, 0.3)'" 
+            onmouseout="this.style.boxShadow='0px 4px 10px rgba(0, 0, 0, 0.2)'">
                 <form id="contact-form" class="contact-form">
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
@@ -335,6 +336,42 @@
                     el: ".swiper-pagination", // Pagination dots
                     clickable: true, // Allow clicking on pagination dots
                 },
+            });
+        });
+    </script>
+
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("MBX9qTZ3nuGwfPzwD"); // Replace with your EmailJS Public Key
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Show loader
+            document.getElementById("loader").style.display = "block";
+
+            // Get form data
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_iffgw8n", "template_rbqkl6n", formData)
+            .then(function(response) {
+                document.getElementById("form-status").textContent = "Message sent successfully!";
+                document.getElementById("form-status").style.color = "lightgreen";
+                document.getElementById("contact-form").reset();
+            }, function(error) {
+                document.getElementById("form-status").textContent = "Error sending message. Try again!";
+                document.getElementById("form-status").style.color = "red";
+            }).finally(() => {
+                // Hide loader
+                document.getElementById("loader").style.display = "none";
             });
         });
     </script>
