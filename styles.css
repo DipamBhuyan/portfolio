@@ -584,8 +584,6 @@ h2.section-title-skills {
     }
 }
 
-
-
 /* Contact Section */
 .contact-container {
     display: flex;
@@ -814,6 +812,7 @@ footer {
         display: flex;
         margin: 0 auto 50px;
     }
+
     nav {
         flex-wrap: wrap; /* Allow buttons to wrap */
         justify-content: center;
@@ -837,7 +836,6 @@ footer {
     .section-title {
         font-size: 1.5rem;
     }
-
 
     /* Hide swiper buttons */
     .swiper-button-next, .swiper-button-prev {
@@ -1437,6 +1435,7 @@ footer {
         display: flex;
         margin: 0 auto 50px;
     }
+
     nav {
         flex-wrap: wrap; /* Allow buttons to wrap */
         justify-content: center;
