@@ -510,7 +510,7 @@ h2.section-title-skills {
     background: linear-gradient(to bottom, #4da6ff, #161641);
     border-radius: 15px;
     padding: 20px;
-    width: calc(25% - 20px); /* 4 cards per row with spacing */
+    width: calc(20% - 20px); /* 4 cards per row with spacing */
     min-height: 250px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
