@@ -500,7 +500,7 @@ h2.section-title-skills {
     flex-wrap: wrap;
     justify-content: center; /* Center elements */
     gap: 20px;
-    max-width: 1400px;
+    max-width: 1800px;
     margin: auto;
     padding: 20px;
 }
