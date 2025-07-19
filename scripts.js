@@ -107,18 +107,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// UI/UX Design Section
-function openModal(imgSrc) {
-    const modal = document.getElementById('designModal');
-    const modalImg = document.getElementById('modalImg');
-    modal.style.display = 'block';
-    modalImg.src = imgSrc;
-  }
-
-  function closeModal() {
-    document.getElementById('designModal').style.display = 'none';
-  }
-
 // Contact Form Submission
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
     event.preventDefault();
