@@ -642,114 +642,71 @@ h2.section-title-skills {
 
 /* UI/UX section */
 .uiux-section {
-    padding: 60px 20px;
-    background: #0f0f0f;
-    color: #fff;
-    overflow: hidden;
-  }
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #0f0f0f, #1e1e1e);
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
 
-  .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #ffffff;
-  }
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
 
-  .marquee-wrapper {
-    overflow: hidden;
-    position: relative;
-  }
+.marquee {
+  display: flex;
+  gap: 30px;
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
+}
 
-  .marquee {
-    display: flex;
-    gap: 20px;
-    animation: scroll 40s linear infinite;
-  }
+.marquee-wrapper:hover .marquee {
+  animation-play-state: paused;
+}
 
-  .marquee-wrapper:hover .marquee {
-    animation-play-state: paused;
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+.design-card {
+  flex: 0 0 auto;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
 
-  .design-card {
-    min-width: 250px;
-    flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    text-align: center;
-  }
+.design-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
 
-  .design-card:hover {
-    transform: scale(1.05);
-  }
+.design-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
 
-  .design-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.design-card p {
+  margin: 10px 0;
+  padding: 0 10px 15px;
+  font-weight: 500;
+  color: bisque;
+  font-size: 15px;
+  text-align: center;
+}
 
-  .design-card p {
-    padding: 10px;
-    font-size: 1rem;
-    background-color: rgba(0,0,0,0.3);
-    color: #fff;
-  }
-
-  /* Modal Styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    cursor: zoom-out;
-  }
-
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 80vh;
-    border-radius: 10px;
-  }
-
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-
-  .close:hover {
-    color: #f00;
-  }
-
-  @media screen and (max-width: 768px) {
-    .design-card {
-      min-width: 180px;
-    }
-    .section-title {
-      font-size: 2rem;
-    }
-  }
 
 /* Contact Section */
 .contact-container {
