@@ -584,6 +584,62 @@ h2.section-title-skills {
     }
 }
 
+.uiux-section {
+  padding: 60px 20px;
+  background-color: #111;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.design-card {
+  flex: 0 0 auto;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.design-card:hover {
+  transform: scale(1.05);
+}
+
+.design-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.design-card p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: bisque;
+  font-size: 16px;
+}
+
 /* Contact Section */
 .contact-container {
     display: flex;
