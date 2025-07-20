@@ -618,7 +618,7 @@ h2.section-title-skills {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -689,8 +689,10 @@ h2.section-title-skills {
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 90%;
-  max-height: 80vh;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 10px;
 }
 
