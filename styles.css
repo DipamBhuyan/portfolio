@@ -587,7 +587,6 @@ h2.section-title-skills {
 /* UI/UX Section */
 .uiux-section {
   padding: 60px 20px;
-  background-color: #0f0f0f;
   text-align: center;
   color: #fff;
   overflow: hidden;
@@ -606,7 +605,7 @@ h2.section-title-skills {
 .marquee {
   display: flex;
   gap: 20px;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 45s linear infinite;
   width: max-content;
 }
 
