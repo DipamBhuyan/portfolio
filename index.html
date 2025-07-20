@@ -487,5 +487,24 @@
             });
         });
     </script>
+
+    <!--   Modal code for UI/UX section   -->
+    <script>
+      function openModal(src) {
+        const modal = document.getElementById("designModal");
+        const modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = src;
+      }
+    
+      function closeModal() {
+        document.getElementById("designModal").style.display = "none";
+      }
+    
+      // Optional: Close modal with Esc key
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") closeModal();
+      });
+    </script>
 </body>
 </html>
