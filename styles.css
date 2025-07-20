@@ -605,7 +605,7 @@ h2.section-title-skills {
 .marquee {
   display: flex;
   gap: 20px;
-  animation: scroll-left 45s linear infinite;
+  animation: scroll-left 30s linear infinite;
   width: max-content;
 }
 
